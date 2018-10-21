@@ -54,6 +54,8 @@ class Home extends Component {
             endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`;
         }
         this.fetchItems(endpoint);
+
+        
     }
 
     fetchItems = (endpoint) => {
@@ -67,7 +69,7 @@ class Home extends Component {
                 currentPage: result.page,
                 totalPages: result.total_pages
             })
-        })
+        }) 
     }
 
     render() {
@@ -94,6 +96,7 @@ class Home extends Component {
                                         movieId={element.id}
                                         movieName={element.original_title}
                                         />
+                                        
                         })}
                     </FourColGrid>
 
