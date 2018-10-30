@@ -1,5 +1,6 @@
 import React from 'react';
 import './LoadMoreBtn.css';
+import propTypes from 'prop-types';
 
 const LoadMoreBtn = (props) => {
     return (
@@ -7,6 +8,10 @@ const LoadMoreBtn = (props) => {
             <p>{props.text}</p>
         </div>
     )
+}
+
+LoadMoreBtn.propTypes = {
+    text: propTypes.string
 }
 
 export default LoadMoreBtn;
